@@ -5,18 +5,23 @@
     --button-color: #5865f2;
     --white-color: #ffffff;
     --hover-color-black: #36393f;
+    --download-card: #f6f6f6;
+    --button-shadow: 0px 15px 20px rgba(0, 0, 0, 0.108);
     --p-font-size: 1.1em;
-    --h1-font-size: 3.5em;
-    --h2-font-size: 2.5em;
+    --a-font-size: 1.1em;
+    --a-font-size-smaller: 0.9em;
+    --h1-font-size: 3.8em;
+    --h2-font-size: 2.7em;
     --h3-font-size: 2em;
     --h4-font-size: 1.8em;
+    --h4-font-size-small: 1em;
     
     
 
 }
 
 
-/* set general param of all document */
+/* set general param of all document------------------------------------------------------------------------------------------- */
 *{
     margin: 0;
     padding: 0;
@@ -26,51 +31,32 @@
 
 
 
-/* central all content container */
-
+/* central all content container-------------------------------------------------------------------------------------------- */
 .page-center{
     max-width: 1400px;
     margin: 0 auto;
 }
-
-
-
-
-/* header setting - nav menu */
-.menu-items{
-    list-style: none;
+.left{
+    width: 70%;
 }
-header li{
-    padding: 0 20px 0 20px;
-    font-size: var(--p-font-size); 
+.right{
+    width: 30%;
 }
-li a{
-    color: var(--white-color);
-    text-decoration: none;
-    font-size: var(--p-font-size);
-    line-height: 3;
+
+
+/* header setting - nav menu-------------------------------------------------------------------------------------------- */
+nav a{
+    padding: 0 25px
 }
-.section-menu{
+.nav-background{
     background-color: var(--header-color);
     color: var(--white-color);   
 }
-.title-header{
+.container-jumbo-text{
     width: 60%;
     margin: 0 auto;
     min-height: 730px;
     color: var(--white-color);
-}
-.title-header div{
-    padding-bottom: 30px;   
-}
-.title-header h1{
-    font-size: 3.5em; 
-    margin-bottom: 30px;   
-}
-.title-header p, main p{
-    font-size: var(--p-font-size);  
-    word-spacing: 1px;
-    line-height : 1.5;   
 }
 .section-backgroud{
     background-image: url("../img/jumbo.png");
@@ -79,88 +65,14 @@ li a{
     background-size: cover; 
 }
 
-
-
-/* setting all button  */
-.a-button, .a-button-black, .a-button-blue{
-    color: var(--footer-color);
-    text-decoration: none;
-    background-color: var(--white-color);
-    border-radius: 30px;
-    margin: 0 20px 0 20px;
-    padding: 12px 18px 12px 18px;
-    font-size: var(--p-font-size);  
-    transition: all 0.3s ease 0s;   
-}
-.a-button-black{
-    background-color: var(--footer-color);
-    color: var(--white-color);
-    margin-left: 10px;
-}
-.a-button-blue{
-    background-color: var(--button-color);
-    color: var(--white-color);
-}
-
-
-
-
-/* section background gray */
-.gray-section{
-    background-color: var(--body-color-row) ;
-}
-
-
-
-
-/* setting of margin - padding container and text */
-.text-align{
-    text-align: center;   
-}
-.padding-items{
-    padding: 30px 10px 30px 25px;
-}
-.container-padding-right{
-    padding-right: 10%;
-}
-.container-padding-left{
-    padding-left: 10%;
-}
-.padding-section{
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
-
-
-
-
-
-/* left and right width container*/
-.left{
-    width: 55%;
-}
-.right{
-    width: 45%;
-}
-
-
-
-
-/* img-main container left - right */
+/* img-main container left - right--------------------------------------------------------------------------------------------------------- */
 .img-main{
-    width: 600px;
+    width: 800px;
     height: auto;  
 }
-main h2{
-    font-size: 2.5em;  
-    word-spacing: 1px;
-    line-height : 1.2; 
-    padding: 20px 0 30px 0;
-}
-section h3{
-    font-size: var(--h4-font-size);  
-    word-spacing: 1px;
-    margin: 40px;
+.img-main-big{
+    width: 1200px;
+    height: auto;  
 }
 .h3-background{
     background-image: url("../img/stars.svg");
@@ -172,83 +84,7 @@ section h3{
     background-position: bottom; 
 }
 
-
-
-
-/* all flex setting type */
-
-.d-flex{
-    display: flex;
-}
-.d-flex-between-center{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.d-flex-column{
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;  
-}
-.d-flex-row{
-    display: flex;
-    justify-content: center;   
-}
-.d-flex-row-start{
-    display: flex;
-    justify-content: flex-start;   
-}
-.flex-row-wrap{
-    display: flex;
-    flex-flow: row wrap;
-}
-.flex-row-nowrap{
-    display: flex;
-    flex-flow: row nowrap;
-}
-.flex-row-reverse{
-    display: flex;
-    flex-flow: row-reverse;
-}
-
-.align-items-start{
-    align-items: flex-start;
-}
-
-
-
-
-
-/* Hover style button list item */
-.a-button:hover{
-    color: var(--header-color);
-    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.108);
-    transform: translateY(2px);
-    text-decoration: none;
-
-}
-.a-button-blue:hover{
-    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.108);
-    transform: translateY(2px);
-    text-decoration: none;
-    background-color: var(--hover-color-blue);
-
-
-}
-.a-button-black:hover{
-    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.108);
-    transform: translateY(2px);
-    text-decoration: none;
-    background-color: var(--hover-color-black);
-}
-a:hover{
-    text-decoration: underline;
-}
-
-
-
-
-/* svg wave gray - wave reverse */
+/* svg wave gray - wave reverse -------------------------------------------------------------------------------------------------*/
 .svg{
     background-image: url("../img/wave.svg");
     height: 100px;
@@ -262,26 +98,9 @@ a:hover{
 }
 
 
-
-
-/* footer setting text - background */
+/* footer setting text - background ---------------------------------------------------------------------------------------------------*/
 footer section{
     background-color: var(--footer-color);
-}
-h4 ul li{
-    margin: 0;
-    padding: 0; 
-    color: var(--white-color); 
-}
-.footer-h4{
-    font-size: var(--h4-font-size);  
-    word-spacing: 1px;
-    width: 70%;
-    margin-bottom: 30px;
-}
-h4{
-    color: var(--button-color);
-    font-size: 1.2em; 
 }
 select{
     background-color: transparent;
@@ -298,11 +117,6 @@ select option{
 .icon-social{
     font-size: 1.5em;
 }
-.icon-social a{
-    color: var(--white-color);
-    margin: 5px;
-    text-decoration: none;
-}
 .border-footer{
     border-top: solid 1px var(--button-color);
 }
@@ -312,58 +126,282 @@ select option{
 
 
 
+/* general set with only tag------------------------------------------------------------------------------------------ */
+a{
+    text-decoration: none;
+}
+ul li{
+    list-style: none;
+}
+p{
+    line-height: 1.7;
+}
+
+
+
+
+/* font size  -------------------------------------------------------------------------------------------------------*/
+.fs-H1{
+    font-size: var(--h1-font-size);
+}
+.fs-H2{
+    font-size: var(--h2-font-size);
+}
+.fs-H3{
+    font-size: var(--h3-font-size);
+}
+.fs-H4{
+    font-size: var(--h4-font-size);
+}
+.fs-H4-small{
+    font-size: var(--h4-font-size-small);
+}
+.fs-p{
+    font-size: var(--p-font-size);
+}
+.fs-a{
+    font-size: var(--a-font-size);
+}
+.fs-a-smaller{
+    font-size: var(--a-font-size-smaller);
+}
+
+
+
+
+
+/* setting all button  -----------------------------------------------------------------------------------------*/
+.button-general{
+    border-radius: 30px;
+    transition: all 0.3s ease 0s;
+    padding: 14px 20px;
+}
+.button-general-smaller{
+    border-radius: 30px;
+    transition: all 0.3s ease 0s;
+    padding: 10px 15px;
+}
+.width-button{
+    width: 25%;
+    margin: 0 auto;
+}
+.width-button-left{
+    width: 55%;
+    
+}
+.inline{
+    display: inline;
+}
+.button-white:hover{
+    box-shadow: var(--button-shadow); 
+    transform: translateY(1px); 
+    cursor: pointer; 
+    text-decoration: none; 
+}
+.button-black:hover{
+    box-shadow: var(--button-shadow); 
+    transform: translateY(1px);
+    cursor: pointer; 
+    text-decoration: none;  
+}
+.button-violet:hover{
+    box-shadow: var(--button-shadow); 
+    transform: translateY(1px);
+    cursor: pointer;
+    text-decoration: none;  
+}
+.hover:hover{
+    text-decoration: underline;
+}
+
+
+
+
+/* color elements (button - text - container) -------------------------------------------------------------------------------*/
+.white{
+    color: var(--white-color);
+}
+.bg-white{
+    background-color: var(--white-color);
+}
+.black{
+    color: var(--footer-color);
+}
+.bg-black{
+    background-color: var(--footer-color);
+}
+.violet{
+    color: var(--button-color);
+}
+.bg-violet{
+    background-color: var(--button-color);
+}
+.gray-section{
+    background-color: var(--body-color-row) ;
+}
+
+
+
+
+/* display block elements -----------------------------------------------------------------------------------------------------*/
+.display-center{
+    width: 220px;
+    margin: 0 auto;
+}
+.display-center-text{
+    width: 70%;
+    margin: 0 auto;
+}
+
+
+
+/* setting of margin - padding container and text-------------------------------------------------------------------------------------- */
+.text-align{
+    text-align: center;   
+}
+.padding__nav{
+    padding: 25px 15px;
+}
+.padding__footer{
+    padding: 30px 0;
+}
+.padding__img{
+    padding: 30px;
+}
+.padding-jumbo-container{
+    padding: 340px 0 50px 0;
+}
+.padding-none{
+    padding: 0;
+}
+.padding-contain{
+    padding: 60px 30px;
+}
+.padding-card{
+    padding: 10px;
+}
+.padding-card-text{
+    padding: 10px 25px;
+}
+.margin-B{
+    margin-bottom: 30px;
+}
+.margin-B-small{
+    margin-bottom: 20px;
+}
+.margin-B-smaller{
+    margin-bottom: 15px;
+}
+.margin-icon{
+    margin: 5px;
+}
+.margin-button{
+    margin: 10px;
+}
+.margin-button-card{
+    margin: 20px 0;
+}
+.margin-dw{
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.margin-top{
+    margin-top: 60px;
+    
+}
+
+
+
+
+
+/* all flex setting type------------------------------------------------------------------------------------------------------------------------- */
+.d-flex{
+    display: flex;
+}
+.d-flex-between-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.align-content{
+    display: flex;
+    flex-flow: column nowrap;    
+}
+.align-items{
+    justify-content: center;
+    align-items: center;
+}
+.d-flex-column{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;  
+}
+.d-flex-row{
+    display: flex;
+    justify-content: center;   
+}
+.d-flex-row-start{
+    display: flex;
+    justify-content: flex-start; 
+}
+.flex-row-wrap{
+    display: flex;
+    flex-flow: row wrap;
+    
+}
+.flex-row-nowrap{
+    display: flex;
+    flex-flow: row nowrap;
+}
+.flex-row-reverse{
+    display: flex;
+    flex-flow: row-reverse;
+}
+.align-items-start{
+    align-items: flex-start;
+}
+.align{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* download page css */
 
 
-.nav-menu{
-    background-color: var(--footer-color);
-    color: var(--white-color);  
-    
+
+/* header - jumbo section */
+.img-jumbo{
+    width: 800px;
+    transition: 1s;
 }
-
-.section-jumbo{
-    background-color: var(--footer-color);
-    padding: 50px 10px;
+.img-jumbo:hover{
+    scale: 1.1;
 }
-
-.button-download{
-    background-color: var(--button-color);
-    color: var(--white-color);
-    font-size: var(--p-font-size);
-
-    text-decoration: none;
-    border-radius: 30px;
-    margin: 0 20px;
-    padding: 12px 18px;
-}
-
-
-.button-download-none{
-    color: var(--white-color);
-    font-size: var(--p-font-size);
-    text-decoration: none;
-    
-
-}
-
-
-
-.section-jumbo h1{
-    font-size: var(--h1-font-size);
-    color: var(--white-color);
-    text-transform: uppercase;
-    margin-bottom: 30px;
-
-}
-.section-jumbo p{
-    font-size: var(--p-font-size);
-    color: var(--white-color);
-    line-height: 1.6;
-    padding-bottom: 60px;
-    
-
-}
-
 .left-width{
     width: 40%;
 }
@@ -371,9 +409,69 @@ select option{
     width: 60%;
 }
 
-.img-size{
-    width: 800px;
+
+
+
+/* main section card */
+
+.card-phone{
+    border-radius: 15px; 
+    overflow: hidden;  
+    transition: 0.5s;
 }
+.card-phone:hover{
+    scale: 1.05;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    animation: card 1s linear infinite;    
+}
+@keyframes card{
+    0%{
+        transform: scale(1)
+    }20%{
+        transform: scale(1.05)
+    }40%{
+        transform: scale(1.1)
+    }60%{
+        transform: scale(1.15)
+    }80%{
+        transform: scale(1.5)
+    }100%{
+        transform: scale(1)
+    }
+}
+
+
+
+
+
+
+/* parametri dimensioni  */
+
+.height{
+    height: 620px; 
+}
+.height-small{
+    height: 320px; 
+}
+.width{
+    width: calc(100% / 2); 
+}
+.block{
+    display: block;
+}
+
+
+
+
+/* position relative - absolute  */
+.relative{
+    position: relative;
+    
+}
+.absolute{
+    position: absolute;
+}
+
 
 
 
